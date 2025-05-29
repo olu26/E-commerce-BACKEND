@@ -17,7 +17,10 @@ connectCloudinary()
 // middleware
 app.use(express.json())
 app.use(cors({
-  origin: ['https://e-commerce-frontend-sooty-sigma.vercel.app']
+  origin: ['https://e-commerce-frontend-sooty-sigma.vercel.app', 'https://e-commerce-admin-alpha-cyan.vercel.app'],
+  methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
+  allowedHeaders: ['Content-Type', 'Authorization', 'token'],
+  credentials: true
 }))
 
 // enpoints 
