@@ -16,7 +16,9 @@ connectCloudinary()
 
 // middleware
 app.use(express.json())
-app.use(cors())
+app.use(cors({
+  origin: ['https://e-commerce-frontend-sooty-sigma.vercel.app']
+}))
 
 // enpoints 
 app.use('/api/user',userRouter)
